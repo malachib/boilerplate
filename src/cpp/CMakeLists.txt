@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.19)
 
-project(boilerplate)
+project(boilerplate VERSION 1.0.0 LANGUAGES CXX
+    DESCRIPTION "Boilerplate Application")
 
 set(REQUEST_CATCH_VERSION v3.4.0)
 
