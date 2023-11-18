@@ -1,0 +1,9 @@
+[CMakeLists.txt]
+indent_style = space
+indent_size = 4
+
+[*.{c,cpp,h,hpp}]
+indent_style = space
+indent_size = 4
+# c++03 only
+# insert_final_newline = true
