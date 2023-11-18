@@ -1,0 +1,12 @@
+menu "Boilerplate"
+
+    config CONTROL_SWITCH
+        int "GPIO for controller button input"
+        default 0
+
+    config FAN_PWM
+        int "GPIO to output 60Hz fan signal"
+        default 2 if IDF_TARGET_ESP32C3
+        default 4 if IDF_TARGET_ESP32
+
+endmenu

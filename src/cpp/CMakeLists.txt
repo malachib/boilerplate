@@ -4,7 +4,7 @@ project(boilerplate)
 
 set(REQUEST_CATCH_VERSION v3.4.0)
 
-include(../../tools/catch.cmake)
+include(../../tools/cmake/catch.cmake)
 
 set(CMAKE_CXX_STANDARD 20)
 
