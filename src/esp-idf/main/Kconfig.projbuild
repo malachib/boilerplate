@@ -1,5 +1,8 @@
 menu "Boilerplate"
 
+# None of these actually configure anything, just helpful examples for
+# how to do things
+
     config CONTROL_SWITCH
         int "GPIO for controller button input"
         default 0
@@ -8,5 +11,29 @@ menu "Boilerplate"
         int "GPIO to output 60Hz fan signal"
         default 2 if IDF_TARGET_ESP32C3
         default 4 if IDF_TARGET_ESP32
+        default 9
+
+    choice
+        prompt "Test mode"
+
+        config POLLED_MODE
+            bool "polled"
+
+        config ISR_MODE
+            bool "isr"
+
+    endchoice
+
+    choice
+        prompt "ISR mode (inactive, always callback - keeping for Kconfig reference)"
+        depends on ISR_MODE
+
+        config ISR_LOW_LEVEL_MODE
+            bool "low level"
+
+        config ISR_CALLBACK_MODE
+            bool "callback"
+
+    endchoice
 
 endmenu
